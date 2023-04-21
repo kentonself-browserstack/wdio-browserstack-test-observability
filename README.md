@@ -1,3 +1,7 @@
+BrowserStack Test Observability for WebdriverIO
+========
+
+
 [**BrowserStack Test Observability**](https://www.browserstack.com/test-observability) is a next generation tool which brings together test reporting, precision debugging, flaky test detection and more... all on the same easy to use dashboard.
 
 Test Observability works regardless of if your tests run on BrowserStack, your local machine, or other cloud infrastructure platforms.
