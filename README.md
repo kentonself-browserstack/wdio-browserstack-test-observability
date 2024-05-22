@@ -26,11 +26,47 @@ Overview
 
 Getting Started
 ===============
+
 1. [Sign up](https://www.browserstack.com/users/sign_up?ref=observability) for a free BrowserStack account (no credit card needed!) if you don't already have one.
 
-2. Copy your username and access key from your [account settings](https://www.browserstack.com/accounts/profile).
+2. Add the environment variables BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY copied from your [account settings](https://www.browserstack.com/accounts/profile).
+(Note this will vary by shell, bash and zsh use a common syntax of 
+```
+export BROWSERSTACK_USERNAME=foo
+export BROWSERSTACK_ACCESS_KEY=bar
+```)
 
-3. Install the [`@wdio/browserstack-service`](https://webdriver.io/docs/browserstack-service). Add it as a devDependency in your package.json, via:
+3. If starting from scratch, initialize a Webdriver.IO project: ` npm init wdio@latest . `
+
+You can use the default selections for most of the configuration wizard:
+```html
+===============================
+🤖 WDIO Configuration Wizard 🧙
+===============================
+
+? A project named "wdio-browserstack-test-observability" was detected at (default), correct? Yes
+? What type of testing would you like to do? E2E Testing - of Web or Mobile Applications
+? Where is your automation backend located? In the cloud using BrowserStack
+? Which environment you would like to automate? Web - web applications in the browser
+? With which browser should we start? Chrome
+? Environment variable for username (username from BrowserStack account in Step 1)
+? Environment variable for access key (access key from BrowserStack account)
+? Which framework do you want to use? Mocha (https://mochajs.org/)
+? Do you want to use a compiler? No!
+? Do you want WebdriverIO to autogenerate some test files? Yes
+? What should be the location of your spec files? (default location)
+? Do you want to use page objects (https://martinfowler.com/bliki/PageObject.html)? Yes
+? Where are your page objects located? (default location)
+? Which reporter do you want to use? spec
+? Do you want to add a plugin to your test setup? (No selection)
+? Would you like to include Visual Testing to your setup? For more information see https://webdriver.io/docs/visual-testing! No
+? Do you want to add a service to your test setup? browserstack
+? Do you want me to run `npm install` Yes
+```
+
+4. If using an existing project, copy your username and access key from your [account settings](https://www.browserstack.com/accounts/profile).
+
+5. Install the [`@wdio/browserstack-service`](https://webdriver.io/docs/browserstack-service). Add it as a devDependency in your package.json, via:
 
 ```
 npm install @wdio/browserstack-service --save-dev
@@ -39,9 +75,9 @@ npm install @wdio/browserstack-service --save-dev
 # Use v8.x.x or later if using WebdriverIO v8.
 ```
 
-4. Configure your `wdio.conf.js` file with code snippets from below depending on where your tests run - on any local or alternative cloud infrastructure, or on BrowserStack. 
+6. Configure your `wdio.conf.js` file with code snippets from below depending on where your tests run - on any local or alternative cloud infrastructure, or on BrowserStack. 
 
-5. Run your tests as usual, and visit the [Test Observability dashboard](https://observability.browserstack.com/) to instantly start analyzing and debugging your tests!
+7. Run your tests as usual, and visit the [Test Observability dashboard](https://observability.browserstack.com/) to instantly start analyzing and debugging your tests!
 
 You can also [`Read more`](https://www.browserstack.com/docs/test-observability/quick-start/webdriverio#Tests_running_locally_or_elsewhere) in the BrowserStack documentation about how to get started with Test Observability.
 
